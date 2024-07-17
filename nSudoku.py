@@ -92,7 +92,7 @@ def test():
         print("not solvable")
 
 def nSolve():
-    n = int(input("Enter the value of n (must be a perfect square): "))
+    n = float(input("Enter the value of n (must be a perfect square): "))
     root_n = int(n**0.5)
     if root_n * root_n != n:
         print("n must be a perfect square (e.g., 4, 9, 16, etc.).")
@@ -100,7 +100,7 @@ def nSolve():
 
     print(f"Enter the Sudoku puzzle of size {n}x{n}, row by row, with 0 for empty cells:")
     sudoku = []
-    for _ in range(n):
+    for _ in range(int(n)):
         row = list(map(int, input().strip().split()))
         if len(row) != n:
             print(f"Each row must contain exactly {n} numbers.")
